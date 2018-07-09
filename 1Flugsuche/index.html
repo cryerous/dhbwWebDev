@@ -8,8 +8,18 @@
 </head>
 <body>
 
+    <div id="waitOverlayWrapper" style="display: none;">
+        <div id="waitOverlayContent">
+            <img src="static/media/black-plane.png" id="waitPlane">
+
+            <p class="text-center" style="margin-top:2.8em;">
+                Bitte warten...
+            </p>
+        </div>
+    </div>
+
     <div class="headerBar">
-        <form action="http://flights.eliashenrich.de/form.php" method="POST" class="text-center">
+        <form action="http://flights.eliashenrich.de/form.php" method="POST" class="text-center" onsubmit="return showOverlay()">
             von
             <input type="text" name="origin" value="SYD" placeholder="von" class="text-center">
             nach
@@ -24,204 +34,8 @@
                 Das ist der Header
             </h1>
 
-            <ul class="flightList">
-                <li>
-                    <p class="flightRoute">SYD &rarr; NAN &rarr; LAX</p>
-                    <span class="timeDeparture">13:00</span> <span class="timeArrival">17:00</span>
-                </li>
-                <li>
-                    <p class="flightRoute">SYD &rarr; NAN &rarr; LAX</p>
-                    <span class="timeDeparture">13:00</span> <span class="timeArrival">17:00</span>
-                </li>
-                <li>
-                    <p class="flightRoute">SYD &rarr; NAN &rarr; LAX</p>
-                    <span class="timeDeparture">13:00</span> <span class="timeArrival">17:00</span>
-                </li>
-                <li>
-                    <p class="flightRoute">SYD &rarr; NAN &rarr; LAX</p>
-                    <span class="timeDeparture">13:00</span> <span class="timeArrival">17:00</span>
-                </li>
-                <li>
-                    <p class="flightRoute">SYD &rarr; NAN &rarr; LAX</p>
-                    <span class="timeDeparture">13:00</span> <span class="timeArrival">17:00</span>
-                </li>
-                <li>
-                    <p class="flightRoute">SYD &rarr; NAN &rarr; LAX</p>
-                    <span class="timeDeparture">13:00</span> <span class="timeArrival">17:00</span>
-                </li>
-                <li>
-                    <p class="flightRoute">SYD &rarr; NAN &rarr; LAX</p>
-                    <span class="timeDeparture">13:00</span> <span class="timeArrival">17:00</span>
-                </li>
-                <li>
-                    <p class="flightRoute">SYD &rarr; NAN &rarr; LAX</p>
-                    <span class="timeDeparture">13:00</span> <span class="timeArrival">17:00</span>
-                </li>
-                <li>
-                    <p class="flightRoute">SYD &rarr; NAN &rarr; LAX</p>
-                    <span class="timeDeparture">13:00</span> <span class="timeArrival">17:00</span>
-                </li>
-                <li>
-                    <p class="flightRoute">SYD &rarr; NAN &rarr; LAX</p>
-                    <span class="timeDeparture">13:00</span> <span class="timeArrival">17:00</span>
-                </li>
-                <li>
-                    <p class="flightRoute">SYD &rarr; NAN &rarr; LAX</p>
-                    <span class="timeDeparture">13:00</span> <span class="timeArrival">17:00</span>
-                </li>
-                <li>
-                    <p class="flightRoute">SYD &rarr; NAN &rarr; LAX</p>
-                    <span class="timeDeparture">13:00</span> <span class="timeArrival">17:00</span>
-                </li>
-                <li>
-                    <p class="flightRoute">SYD &rarr; NAN &rarr; LAX</p>
-                    <span class="timeDeparture">13:00</span> <span class="timeArrival">17:00</span>
-                </li>
-                <li>
-                    <p class="flightRoute">SYD &rarr; NAN &rarr; LAX</p>
-                    <span class="timeDeparture">13:00</span> <span class="timeArrival">17:00</span>
-                </li>
-                <li>
-                    <p class="flightRoute">SYD &rarr; NAN &rarr; LAX</p>
-                    <span class="timeDeparture">13:00</span> <span class="timeArrival">17:00</span>
-                </li>
-                <li>
-                    <p class="flightRoute">SYD &rarr; NAN &rarr; LAX</p>
-                    <span class="timeDeparture">13:00</span> <span class="timeArrival">17:00</span>
-                </li>
-                <li>
-                    <p class="flightRoute">SYD &rarr; NAN &rarr; LAX</p>
-                    <span class="timeDeparture">13:00</span> <span class="timeArrival">17:00</span>
-                </li>
-                <li>
-                    <p class="flightRoute">SYD &rarr; NAN &rarr; LAX</p>
-                    <span class="timeDeparture">13:00</span> <span class="timeArrival">17:00</span>
-                </li>
-                <li>
-                    <p class="flightRoute">SYD &rarr; NAN &rarr; LAX</p>
-                    <span class="timeDeparture">13:00</span> <span class="timeArrival">17:00</span>
-                </li>
-                <li>
-                    <p class="flightRoute">SYD &rarr; NAN &rarr; LAX</p>
-                    <span class="timeDeparture">13:00</span> <span class="timeArrival">17:00</span>
-                </li>
-                <li>
-                    <p class="flightRoute">SYD &rarr; NAN &rarr; LAX</p>
-                    <span class="timeDeparture">13:00</span> <span class="timeArrival">17:00</span>
-                </li>
-                <li>
-                    <p class="flightRoute">SYD &rarr; NAN &rarr; LAX</p>
-                    <span class="timeDeparture">13:00</span> <span class="timeArrival">17:00</span>
-                </li>
-                <li>
-                    <p class="flightRoute">SYD &rarr; NAN &rarr; LAX</p>
-                    <span class="timeDeparture">13:00</span> <span class="timeArrival">17:00</span>
-                </li>
-                <li>
-                    <p class="flightRoute">SYD &rarr; NAN &rarr; LAX</p>
-                    <span class="timeDeparture">13:00</span> <span class="timeArrival">17:00</span>
-                </li>
-                <li>
-                    <p class="flightRoute">SYD &rarr; NAN &rarr; LAX</p>
-                    <span class="timeDeparture">13:00</span> <span class="timeArrival">17:00</span>
-                </li>
-                <li>
-                    <p class="flightRoute">SYD &rarr; NAN &rarr; LAX</p>
-                    <span class="timeDeparture">13:00</span> <span class="timeArrival">17:00</span>
-                </li>
-                <li>
-                    <p class="flightRoute">SYD &rarr; NAN &rarr; LAX</p>
-                    <span class="timeDeparture">13:00</span> <span class="timeArrival">17:00</span>
-                </li>
-                <li>
-                    <p class="flightRoute">SYD &rarr; NAN &rarr; LAX</p>
-                    <span class="timeDeparture">13:00</span> <span class="timeArrival">17:00</span>
-                </li>
-                <li>
-                    <p class="flightRoute">SYD &rarr; NAN &rarr; LAX</p>
-                    <span class="timeDeparture">13:00</span> <span class="timeArrival">17:00</span>
-                </li>
-                <li>
-                    <p class="flightRoute">SYD &rarr; NAN &rarr; LAX</p>
-                    <span class="timeDeparture">13:00</span> <span class="timeArrival">17:00</span>
-                </li>
-                <li>
-                    <p class="flightRoute">SYD &rarr; NAN &rarr; LAX</p>
-                    <span class="timeDeparture">13:00</span> <span class="timeArrival">17:00</span>
-                </li>
-                <li>
-                    <p class="flightRoute">SYD &rarr; NAN &rarr; LAX</p>
-                    <span class="timeDeparture">13:00</span> <span class="timeArrival">17:00</span>
-                </li>
-                <li>
-                    <p class="flightRoute">SYD &rarr; NAN &rarr; LAX</p>
-                    <span class="timeDeparture">13:00</span> <span class="timeArrival">17:00</span>
-                </li>
-                <li>
-                    <p class="flightRoute">SYD &rarr; NAN &rarr; LAX</p>
-                    <span class="timeDeparture">13:00</span> <span class="timeArrival">17:00</span>
-                </li>
-                <li>
-                    <p class="flightRoute">SYD &rarr; NAN &rarr; LAX</p>
-                    <span class="timeDeparture">13:00</span> <span class="timeArrival">17:00</span>
-                </li>
-                <li>
-                    <p class="flightRoute">SYD &rarr; NAN &rarr; LAX</p>
-                    <span class="timeDeparture">13:00</span> <span class="timeArrival">17:00</span>
-                </li>
-                <li>
-                    <p class="flightRoute">SYD &rarr; NAN &rarr; LAX</p>
-                    <span class="timeDeparture">13:00</span> <span class="timeArrival">17:00</span>
-                </li>
-                <li>
-                    <p class="flightRoute">SYD &rarr; NAN &rarr; LAX</p>
-                    <span class="timeDeparture">13:00</span> <span class="timeArrival">17:00</span>
-                </li>
-                <li>
-                    <p class="flightRoute">SYD &rarr; NAN &rarr; LAX</p>
-                    <span class="timeDeparture">13:00</span> <span class="timeArrival">17:00</span>
-                </li>
-                <li>
-                    <p class="flightRoute">SYD &rarr; NAN &rarr; LAX</p>
-                    <span class="timeDeparture">13:00</span> <span class="timeArrival">17:00</span>
-                </li>
-                <li>
-                    <p class="flightRoute">SYD &rarr; NAN &rarr; LAX</p>
-                    <span class="timeDeparture">13:00</span> <span class="timeArrival">17:00</span>
-                </li>
-                <li>
-                    <p class="flightRoute">SYD &rarr; NAN &rarr; LAX</p>
-                    <span class="timeDeparture">13:00</span> <span class="timeArrival">17:00</span>
-                </li>
-                <li>
-                    <p class="flightRoute">SYD &rarr; NAN &rarr; LAX</p>
-                    <span class="timeDeparture">13:00</span> <span class="timeArrival">17:00</span>
-                </li>
-                <li>
-                    <p class="flightRoute">SYD &rarr; NAN &rarr; LAX</p>
-                    <span class="timeDeparture">13:00</span> <span class="timeArrival">17:00</span>
-                </li>
-                <li>
-                    <p class="flightRoute">SYD &rarr; NAN &rarr; LAX</p>
-                    <span class="timeDeparture">13:00</span> <span class="timeArrival">17:00</span>
-                </li>
-                <li>
-                    <p class="flightRoute">SYD &rarr; NAN &rarr; LAX</p>
-                    <span class="timeDeparture">13:00</span> <span class="timeArrival">17:00</span>
-                </li>
-                <li>
-                    <p class="flightRoute">SYD &rarr; NAN &rarr; LAX</p>
-                    <span class="timeDeparture">13:00</span> <span class="timeArrival">17:00</span>
-                </li>
-                <li>
-                    <p class="flightRoute">SYD &rarr; NAN &rarr; LAX</p>
-                    <span class="timeDeparture">13:00</span> <span class="timeArrival">17:00</span>
-                </li>
-                <li>
-                    <p class="flightRoute">SYD &rarr; NAN &rarr; LAX</p>
-                    <span class="timeDeparture">13:00</span> <span class="timeArrival">17:00</span>
-                </li>
-                <li>
+            <ul class="flightList" id="flightList">
+                <li class="hidden" id="listDummy">
                     <p class="flightRoute">SYD &rarr; NAN &rarr; LAX</p>
                     <span class="timeDeparture">13:00</span> <span class="timeArrival">17:00</span>
                 </li>
@@ -229,9 +43,44 @@
 
         </div>
         <div class="contentRight">
-            Hi, rechts
+            Rechter Content
         </div>
     </div>
+
+    <script>
+        function showOverlay() {
+            addListItem("19:30");
+            return false;
+
+            var element = document.getElementById('waitOverlayWrapper');
+            element.style.display = "block";
+
+            window.setTimeout(hideOverlay, 3000);
+
+            return false;
+        }
+
+        function hideOverlay() {
+            var element = document.getElementById('waitOverlayWrapper');
+            element.style.display = 'none';
+        }
+
+        function addListItem(abflugzeit) {
+            var listItem = document.getElementById('listDummy');
+
+            // Listenelement klonen und neu einfügen
+            var newListItem = listItem.cloneNode(true);
+            newListItem.setAttribute('id', '');
+            newListItem.classList.remove('hidden');
+
+            // Kindelement des neuen Knotens bearbeiten
+            newListItem.getElementsByClassName('timeDeparture')[0].innerText = abflugzeit;
+
+            document.getElementById('flightList').appendChild(newListItem);
+        }
+    </script>
+
+
 
 </body>
 </html>
